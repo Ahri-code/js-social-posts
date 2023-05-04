@@ -59,6 +59,8 @@ const posts = [
 
 // ----------------------------------------
 
+// --- Create Post ---
+
 for (let i = 0; i < posts.length; i++) {
     const post = posts[i];
     let div = document.createElement("div");
@@ -68,11 +70,41 @@ for (let i = 0; i < posts.length; i++) {
 
     let printPost = `<div class="post__header">`;
     printPost += `<div class="post-meta">`;
+
     printPost += `<div class="post-meta_icon">`;
     printPost += `<img class="profile-pic" src="${post.author.image}">`;
     printPost += `</div>`;
+
+    printPost += `<div class="post-meta_data">`;
+    printPost += `<div class="post-meta_author">${post.author.name}</div>`;
+    printPost += `<div class="post-meta_time">${post.created}</div>`;
+    printPost += `</div>`;
+
     printPost += `</div>`;
     printPost += `</div>`;
+
+    printPost += `<div class="post-text">Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.</div>`;
+    printPost += `<div class="post_image">`;
+    printPost += `<img src="${post.media}">`;
+    printPost += `</div>`;
+
+    printPost += `<div class="post__footer">`;
+    printPost += `<div class="likes js-likes">`;
+
+    printPost += `<div class="likes__cta">`;
+    printPost += `<a class="like-button  js-like-button" href="#" data-postid="1">`;
+    printPost += `<i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>`;
+    printPost += `<span class="like-button__label">Mi Piace</span>`; 
+    printPost += `</a>`; 
+    printPost += `</div>`;
+    
+    printPost += `<div class="likes__counter">`;
+    printPost += `Piace a <b id="like-counter-1" class="js-likes-counter">${post.likes}</b> persone`;
+    printPost += `</div>`;
+    
+
+    printPost += `</div>`;  
+    printPost += `</div>`;    
 
     document.getElementById(`post${i}`).innerHTML = printPost;
 }
