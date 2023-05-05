@@ -71,20 +71,20 @@ for (let i = 0; i < posts.length; i++) {
     let printPost = `<div class="post__header">`;
     printPost += `<div class="post-meta">`;
 
-    printPost += `<div class="post-meta_icon">`;
+    printPost += `<div class="post-meta__icon">`;
     printPost += `<img class="profile-pic" src="${post.author.image}">`;
     printPost += `</div>`;
 
-    printPost += `<div class="post-meta_data">`;
-    printPost += `<div class="post-meta_author">${post.author.name}</div>`;
-    printPost += `<div class="post-meta_time">${post.created}</div>`;
+    printPost += `<div class="post-meta__data">`;
+    printPost += `<div class="post-meta__author">${post.author.name}</div>`;
+    printPost += `<div class="post-meta__time">${post.created}</div>`;
     printPost += `</div>`;
 
     printPost += `</div>`;
     printPost += `</div>`;
 
     printPost += `<div class="post-text">Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.</div>`;
-    printPost += `<div class="post_image">`;
+    printPost += `<div class="post__image">`;
     printPost += `<img src="${post.media}">`;
     printPost += `</div>`;
 
@@ -108,3 +108,4 @@ for (let i = 0; i < posts.length; i++) {
 
     document.getElementById(`post${i}`).innerHTML = printPost;
 }
+
