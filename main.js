@@ -83,7 +83,7 @@ for (let i = 0; i < posts.length; i++) {
     printPost += `</div>`;
     printPost += `</div>`;
 
-    printPost += `<div class="post-text">Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.</div>`;
+    printPost += `<div class="post-text">${post.content}</div>`;
     printPost += `<div class="post__image">`;
     printPost += `<img src="${post.media}">`;
     printPost += `</div>`;
